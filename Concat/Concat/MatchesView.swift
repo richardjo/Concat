@@ -9,48 +9,72 @@
 import SwiftUI
 
 struct MatchesView: View {
+    @State var isRandomSwitchToggled = false
+    init() {
+        UINavigationBar.appearance().backgroundColor = #colorLiteral(red: 0.3450980392, green: 0.1725490196, blue: 0.5137254902, alpha: 1)
+        UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.3450980392, green: 0.1725490196, blue: 0.5137254902, alpha: 1)
+        UINavigationBar.appearance().tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    }
+    
     var body: some View {
-        ZStack {
-            ProfileInformationView()
-                .padding(.top, 30)
-            NavigationView {
-                VStack {
-                    ScrollView {
-                        VStack(alignment: .leading, spacing: 13){
-                            Text("Matches")
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
-                                .padding(.top, 17)
-                                .padding(.bottom, 30)
-                            ForEach(testGroupsData, id: \.id) { group in
-                                NavigationLink(destination: GroupView(groupData: group)) {
-                                    VStack(alignment: .leading, spacing: 9){
-                                        Text(group.date)
-                                           .font(.subheadline)
-                                           .foregroundColor(Color.gray)
-                                           .fontWeight(.light)
-                                        GroupCardView(highlightColor: group.highlightColor, backgroundColor: group.backgroundColor, names: group.names, profileImages: group.profileImages)
-                                            .padding(.bottom, 13)
-                                    }
-                                }
-                            }
-                            Spacer()
-                                .frame(height: 100)
-                        }
-                        .frame(width: screen.width)
-                        .background(Color.white
-                        .edgesIgnoringSafeArea(.bottom)
-                        .shadow(color: Color.black.opacity(0.5), radius: 3, x: 1, y: 1))
+        NavigationView {
+            ScrollView {
+                ProfileInformationView()
+                    .padding(.top, 19)
+                    .padding(.bottom, 5)
+                    .background(Color.gray.opacity(0.20))
+                VStack(alignment: .leading, spacing: 13){
+                    HStack(alignment: .center){
+                        Text("Matches")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .padding(.leading, 3)
+                        Toggle(isOn: $isRandomSwitchToggled) {
+                            Text("")
+                        }.padding(.trailing, 5)
                     }
+                    .frame(width: screen.width - 60)
+                    .padding(.top, 17)
+                    .padding(.bottom, 10)
+
+                    ForEach(testGroupsData, id: \.id) { group in
+                        NavigationLink(destination: GroupView(groupData: group)) {
+                            VStack(alignment: .leading, spacing: 9){
+                                Text(group.date)
+                                    .font(.subheadline)
+                                    .foregroundColor(Color.gray)
+                                    .fontWeight(.light)
+                                    .padding(.bottom, 7)
+                                    .padding(.leading, 3)
+                                GroupCardView(highlightColor: group.highlightColor, backgroundColor: group.backgroundColor, names: group.names, profileImages: group.profileImages)
+                                    .padding(.bottom, 13)
+                            }
+                        }
+                    }
+                    Spacer()
+                        .frame(height: 100)
                 }
+                .frame(width: screen.width)
+                .background(Color.white
+                .edgesIgnoringSafeArea(.bottom)
+                )
+                
             }
-        .navigationBarTitle("")
-        .navigationBarHidden(true)
+            .navigationBarTitle("", displayMode: .inline)
+            .navigationBarItems(leading:
+                HStack {
+                    Image("logo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 170)
+                        .padding(.bottom, 3)
+                }
+            .frame(width: screen.width))
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MatchesView_Previews: PreviewProvider {
     static var previews: some View {
         MatchesView()
     }
@@ -65,10 +89,6 @@ struct GroupCardView: View {
     var profileImages:[Image]!
     var body: some View {
         ZStack {
-            HStack {
-                GroupCardHighlightView(highlightColor: highlightColor)
-                Spacer()
-            }
             //Description - profile images and names
             VStack(alignment: .leading){
                 HStack(spacing: -9){
@@ -94,8 +114,15 @@ struct GroupCardView: View {
             }
         }
         .frame(width: screen.width - 60, height: 140)
-        .background(backgroundColor)
-        .clipShape(RoundedRectangle(cornerRadius: 13, style: .continuous))
+        .background(
+            ZStack {
+                Color.white
+                HStack {
+                    GroupCardHighlightView(highlightColor: backgroundColor)
+                    Spacer()
+                }
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 13, style: .continuous)).padding(.all, 3).shadow(radius: 5))
     }
 }
 
@@ -119,7 +146,6 @@ struct GroupCardViewProfileImages: View {
                 .frame(width: 44, height: 44)
                 .aspectRatio(contentMode: .fill)
                 .clipShape(Circle())
-                .overlay(Circle().stroke(Color.white, lineWidth: 2))
                 .shadow(color: Color.black.opacity(0.3), radius: 3)
         }
     }
@@ -128,14 +154,19 @@ struct GroupCardViewProfileImages: View {
 struct ProfileInformationView: View {
     var body: some View {
         VStack {
-            HStack {
-                Text("3250")
-                    .font(.title)
-                    .fontWeight(.light)
+            HStack(alignment: .center){
+                HStack(alignment: .bottom, spacing: 5){
+                    Text("3250")
+                        .font(.title)
+                    Text("Points")
+                        .font(.headline)
+                        .fontWeight(.light)
+                        .padding(.bottom, 3)
+                }
                 Spacer()
                 Image("RichardPlaceholder")
                     .resizable()
-                    .frame(width: 44, height: 44)
+                    .frame(width: 60, height: 60)
                     .clipShape(Circle())
             }
             .padding(.horizontal, 36)
@@ -163,7 +194,8 @@ struct Activity {
 }
 
 let testGroupsData = [
-    Group(date: "September 13st, 2020", names: ["Andy", "Richard", "Chase"], profileImages: [Image("port1"), Image("port2"), Image("port3")], backgroundColor: Color(#colorLiteral(red: 0.8705882353, green: 0.2, blue: 0.2, alpha: 0.2)), highlightColor: Color(#colorLiteral(red: 1, green: 0.3019607843, blue: 0.3019607843, alpha: 1)), activities: [Activity(name: "Watch the Rock", description: "Visit this livestream to see Northwestern's famed rock in real time!"), Activity(name: "Play a Game", description: "Suggestions: Skribbl.io, COD Warzone, Codenames, etc.")]),
-    Group(date: "September 6th, 2020", names: ["Leo", "Lana", "Matt"], profileImages: [Image("port4"), Image("port5"), Image("port6")], backgroundColor: Color(#colorLiteral(red: 0.2745098039, green: 0.9333333333, blue: 0.1098039216, alpha: 0.2)), highlightColor: Color(#colorLiteral(red: 0.2352941176, green: 0.4823529412, blue: 0.2745098039, alpha: 1)), activities: [Activity(name: "Watch the Rock", description: "Visit this livestream to see Northwestern's famed rock in real time!")]),
-    Group(date: "August 31th, 2020", names: ["Will", "Anna", "Bill"], profileImages: [Image("port7"), Image("port8"), Image("port9")], backgroundColor: Color(#colorLiteral(red: 0.3450980392, green: 0.3333333333, blue: 0.9333333333, alpha: 0.2)), highlightColor: Color(#colorLiteral(red: 0.3019607843, green: 0.4117647059, blue: 1, alpha: 1)), activities: [Activity(name: "Watch the Rock", description: "Visit this livestream to see Northwestern's famed rock in real time!")])
+    Group(date: "September 13st, 2020", names: ["Andy", "Richard", "Joy"], profileImages: [Image("face1"), Image("face2"), Image("face6")], backgroundColor: Color(#colorLiteral(red: 0.8705882353, green: 0.2, blue: 0.2, alpha: 0.2)), highlightColor: Color(#colorLiteral(red: 1, green: 0.3019607843, blue: 0.3019607843, alpha: 1)), activities: [Activity(name: "Watch the Rock", description: "Visit this livestream to see Northwestern's famed rock in real time!"), Activity(name: "Play a Game", description: "Suggestions: Skribbl.io, COD Warzone, Codenames, etc.")]),
+    Group(date: "September 6th, 2020", names: ["Leo", "Lana", "Morty"], profileImages: [Image("face4"), Image("face5"), Image("face3")], backgroundColor: Color(#colorLiteral(red: 0.2745098039, green: 0.9333333333, blue: 0.1098039216, alpha: 0.2)), highlightColor: Color(#colorLiteral(red: 0.2352941176, green: 0.4823529412, blue: 0.2745098039, alpha: 1)), activities: [Activity(name: "Watch the Rock", description: "Visit this livestream to see Northwestern's famed rock in real time!")]),
+    Group(date: "August 31th, 2020", names: ["Will", "Anna", "Bill"], profileImages: [Image("face7"), Image("face8"), Image("face9")], backgroundColor: Color(#colorLiteral(red: 0.3450980392, green: 0.3333333333, blue: 0.9333333333, alpha: 0.2)), highlightColor: Color(#colorLiteral(red: 0.3019607843, green: 0.4117647059, blue: 1, alpha: 1)), activities: [Activity(name: "Watch the Rock", description: "Visit this livestream to see Northwestern's famed rock in real time!")])
 ]
+

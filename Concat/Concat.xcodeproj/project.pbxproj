@@ -14,6 +14,8 @@
 		3F128059250F110100B69CF6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F128058250F110100B69CF6 /* Preview Assets.xcassets */; };
 		3F12805C250F110100B69CF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F12805A250F110100B69CF6 /* LaunchScreen.storyboard */; };
 		3F128064250F466D00B69CF6 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F128063250F466D00B69CF6 /* GroupView.swift */; };
+		3F128066250FBF5900B69CF6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F128065250FBF5900B69CF6 /* ProfileView.swift */; };
+		3F128068250FE56D00B69CF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F128067250FE56D00B69CF6 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		3F12805B250F110100B69CF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F12805D250F110100B69CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F128063250F466D00B69CF6 /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
+		3F128065250FBF5900B69CF6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		3F128067250FE56D00B69CF6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +64,10 @@
 			children = (
 				3F12804F250F110000B69CF6 /* AppDelegate.swift */,
 				3F128051250F110000B69CF6 /* SceneDelegate.swift */,
+				3F128067250FE56D00B69CF6 /* ContentView.swift */,
 				3F128053250F110000B69CF6 /* MatchesView.swift */,
 				3F128063250F466D00B69CF6 /* GroupView.swift */,
+				3F128065250FBF5900B69CF6 /* ProfileView.swift */,
 				3F128055250F110100B69CF6 /* Assets.xcassets */,
 				3F12805A250F110100B69CF6 /* LaunchScreen.storyboard */,
 				3F12805D250F110100B69CF6 /* Info.plist */,
@@ -151,6 +157,8 @@
 			files = (
 				3F128050250F110000B69CF6 /* AppDelegate.swift in Sources */,
 				3F128052250F110000B69CF6 /* SceneDelegate.swift in Sources */,
+				3F128068250FE56D00B69CF6 /* ContentView.swift in Sources */,
+				3F128066250FBF5900B69CF6 /* ProfileView.swift in Sources */,
 				3F128064250F466D00B69CF6 /* GroupView.swift in Sources */,
 				3F128054250F110000B69CF6 /* MatchesView.swift in Sources */,
 			);
