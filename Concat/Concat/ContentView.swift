@@ -18,7 +18,7 @@ struct ContentView: View {
                     Text("Matches")
                         .foregroundColor(.black)
             }
-            Color.white
+            EventsView()
                 .tabItem {
                     Image(systemName: "calendar")
                         .renderingMode(.original)

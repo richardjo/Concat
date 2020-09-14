@@ -31,13 +31,13 @@ struct ProfileView: View {
                                 .font(.system(size: 23, weight: .regular, design: .default))
                                 .fontWeight(.bold)
                                 .padding(.bottom, 5)
-                            Text("Major: Computer Science")
-                                .font(.subheadline)
-                                .foregroundColor(Color.gray)
-                                
-                                .font(.subheadline)
-                                .foregroundColor(Color.gray)
-                                .padding(.bottom, 9)
+//                            Text("Major: Computer Science")
+//                                .font(.subheadline)
+//                                .foregroundColor(Color.gray)
+//                                .font(.subheadline)
+//                                .foregroundColor(Color.gray)
+//                                .padding(.bottom, 9)
+                            Text("he/him/his")
                             Divider()
                             Text("Bio")
                                 .font(.system(size: 19, weight: .semibold, design: .default))
@@ -45,7 +45,6 @@ struct ProfileView: View {
                             VStack(alignment: .leading){
                                 ProfileInterestView(question: "Favorite fruit loop color:", answer: "Red")
                                 ProfileInterestView(question: "Is cereal soup:", answer: "Yes")
-                                ProfileInterestView(question: "Favorite fruit loop color:", answer: "Red")
                                 ProfileInterestView(question: "Pineapple on pizza:", answer: "No")
                                 ProfileInterestView(question: "Favorite show from my childhood:", answer: "Tom and Jerry")
                             }
@@ -54,7 +53,8 @@ struct ProfileView: View {
                                 .font(.system(size: 19, weight: .semibold, design: .default))
                                 .padding(.bottom, 9)
                             VStack(spacing: 5){
-                                HStack { ExploreProfileInterestsView(interest: "Frisbee")
+                                HStack {
+                                    ExploreProfileInterestsView(interest: "Frisbee")
                                     ExploreProfileInterestsView(interest: "Basketball")
                                     ExploreProfileInterestsView(interest: "Running")
                                 }
@@ -63,12 +63,12 @@ struct ProfileView: View {
                             Text("Contact")
                                 .font(.system(size: 19, weight: .semibold, design: .default))
                                 .padding(.bottom, 9)
-                            Text("Instagram: richard.jo1\nNumber: 847-907-5104")
+                            Text("Instagram: richard.jo1")
                                 .font(.system(size: 15, weight: .regular, design: .default))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .multilineTextAlignment(.leading)
-                            Spacer()
-                                .frame(height: 100)
+                            //Spacer()
+                                //.frame(height: 100)
                             //Stupid offset shit
                             //                            Color.white.opacity(0)
                             //                                .frame(height: 100)

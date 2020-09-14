@@ -11,8 +11,8 @@ import SwiftUI
 struct MatchesView: View {
     @State var isRandomSwitchToggled = false
     init() {
-        UINavigationBar.appearance().backgroundColor = #colorLiteral(red: 0.3450980392, green: 0.1725490196, blue: 0.5137254902, alpha: 1)
-        UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.3450980392, green: 0.1725490196, blue: 0.5137254902, alpha: 1)
+        UINavigationBar.appearance().backgroundColor = #colorLiteral(red: 0.3725490196, green: 0.168627451, blue: 0.5921568627, alpha: 1)
+        UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.3725490196, green: 0.168627451, blue: 0.5921568627, alpha: 1)
         UINavigationBar.appearance().tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
     
@@ -122,7 +122,7 @@ struct GroupCardView: View {
                     Spacer()
                 }
             }
-            .clipShape(RoundedRectangle(cornerRadius: 13, style: .continuous)).padding(.all, 3).shadow(radius: 5))
+            .clipShape(RoundedRectangle(cornerRadius: 13, style: .continuous)).padding(.all, 3).shadow(color: Color.black.opacity(0.3), radius: 4, x: 0, y: 4))
     }
 }
 
