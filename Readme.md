@@ -8,8 +8,10 @@ Using a human-centered design approach, where we synthesized the "pain-points" o
 
 Our team designed/wireframed the application using Figma. I then created a functional prototype using Swift to show the practicality of the idea as well as the minor details of how our app would be designed!
 
-[Promo Video Link]("https://drive.google.com/file/d/1VWbTe42rjUPuPJ5mc8Nn_PZpfNc9EoJM/view?usp=sharing")
-[Presentation Link]("https://docs.google.com/presentation/d/1xk4DHRBZaeLORzxIJ4EqxwRp32kqDuP2cL4qszPP4MM/edit?usp=sharing")
+[Promo Video Link]
+("https://drive.google.com/file/d/1VWbTe42rjUPuPJ5mc8Nn_PZpfNc9EoJM/view?usp=sharing")
+[Presentation Link]
+("https://docs.google.com/presentation/d/1xk4DHRBZaeLORzxIJ4EqxwRp32kqDuP2cL4qszPP4MM/edit?usp=sharing")
 ## Prototype
 
 ![Imgur](https://i.imgur.com/9YihMdp.png)
