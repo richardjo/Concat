@@ -10,9 +10,13 @@ Concat was chosen by professors and students as one of the **top 4 ideas** in th
 
 ## Prototype
 
-![Imgur](https://imgur.com/9YihMdp)
+![Imgur](https://i.imgur.com/9YihMdp.png)
+
+![Imgur](https://i.imgur.com/lXVGBmk.png)
+
+
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2MzExNzY3MCw2MzExMTYyODNdfQ==
+eyJoaXN0b3J5IjpbMjExMDA5MDg2MCw2MzExMTYyODNdfQ==
 -->
