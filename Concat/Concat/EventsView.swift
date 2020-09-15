@@ -32,7 +32,19 @@ struct EventsView: View {
                                 .fontWeight(.light)
                                 .padding(.bottom, 7)
                                 .padding(.leading, 3)
-                            EventsCardView(name: "Study Groups", description: "Meet study buddies - all majors!", time: "9:00 PM - 10:00 PM", numberAttending: "20", highlightColor: Color(#colorLiteral(red: 0.8705882353, green: 0.2, blue: 0.2, alpha: 0.2)))
+                        EventsCardView(name: "Study Groups", description: "Meet study buddies!", time: "9:00 PM - 10:00 PM", numberAttending: "20", highlightColor: Color(#colorLiteral(red: 0.8705882353, green: 0.2, blue: 0.2, alpha: 0.2)))
+                                .padding(.bottom, 13)
+                        }
+                    }
+                    NavigationLink(destination: Color.white) {
+                        VStack(alignment: .leading, spacing: 9){
+                            Text("September 16th, 2020")
+                                .font(.subheadline)
+                                .foregroundColor(Color.gray)
+                                .fontWeight(.light)
+                                .padding(.bottom, 7)
+                                .padding(.leading, 3)
+                            EventsCardView(name: "XBOX Gaming Tournament", description: "Join video game tournaments!", time: "9:00 PM - 10:00 PM", numberAttending: "100", highlightColor: Color(#colorLiteral(red: 0.2745098039, green: 0.9333333333, blue: 0.1098039216, alpha: 0.2)))
                                 .padding(.bottom, 13)
                         }
                     }
@@ -72,11 +84,12 @@ struct EventsCardView: View {
     var numberAttending:String!
     var highlightColor:Color!
     var body: some View {
-        ZStack {
+        ZStack(alignment: .leading){
             //Description - profile images and names
             VStack(alignment: .leading){
                 Text(name)
                     .foregroundColor(Color.black)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 Text("\(numberAttending) people attending")
                     .font(.system(size: 13, weight: .light, design: .default))
                     .foregroundColor(Color.gray)
@@ -85,8 +98,9 @@ struct EventsCardView: View {
                     .font(.system(size: 17, weight: .medium))
                     .foregroundColor(Color.black)
             }
-            .padding(.trailing, 30)
+            .frame(width: 270)
             .padding(.vertical, 30)
+            .padding(.leading, 40)
             HStack {
                 Spacer()
                 Image(systemName: "chevron.right")
@@ -94,7 +108,7 @@ struct EventsCardView: View {
                     .padding(.trailing, 15)
             }
         }
-        .frame(width: screen.width - 60, height: 140)
+        .frame(width: screen.width - 60, height: 130)
         .background(
             ZStack {
                 Color.white

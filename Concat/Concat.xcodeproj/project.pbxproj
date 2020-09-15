@@ -17,6 +17,8 @@
 		3F128066250FBF5900B69CF6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F128065250FBF5900B69CF6 /* ProfileView.swift */; };
 		3F128068250FE56D00B69CF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F128067250FE56D00B69CF6 /* ContentView.swift */; };
 		3F12806C25101A2200B69CF6 /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12806B25101A2200B69CF6 /* EventsView.swift */; };
+		3F12806E251064A500B69CF6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12806D251064A400B69CF6 /* LoginView.swift */; };
+		3F1280702510752500B69CF6 /* FormQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12806F2510752500B69CF6 /* FormQuestionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		3F128065250FBF5900B69CF6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3F128067250FE56D00B69CF6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3F12806B25101A2200B69CF6 /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
+		3F12806D251064A400B69CF6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		3F12806F2510752500B69CF6 /* FormQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormQuestionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 				3F128063250F466D00B69CF6 /* GroupView.swift */,
 				3F128065250FBF5900B69CF6 /* ProfileView.swift */,
 				3F12806B25101A2200B69CF6 /* EventsView.swift */,
+				3F12806D251064A400B69CF6 /* LoginView.swift */,
+				3F12806F2510752500B69CF6 /* FormQuestionsView.swift */,
 				3F128055250F110100B69CF6 /* Assets.xcassets */,
 				3F12805A250F110100B69CF6 /* LaunchScreen.storyboard */,
 				3F12805D250F110100B69CF6 /* Info.plist */,
@@ -164,6 +170,8 @@
 				3F128068250FE56D00B69CF6 /* ContentView.swift in Sources */,
 				3F128066250FBF5900B69CF6 /* ProfileView.swift in Sources */,
 				3F128064250F466D00B69CF6 /* GroupView.swift in Sources */,
+				3F1280702510752500B69CF6 /* FormQuestionsView.swift in Sources */,
+				3F12806E251064A500B69CF6 /* LoginView.swift in Sources */,
 				3F128054250F110000B69CF6 /* MatchesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
