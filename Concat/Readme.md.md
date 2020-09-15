@@ -6,10 +6,13 @@ Using a human-centered design approach, where we synthesized the "pain-points" o
 
 Our team designed/wireframed the application using Figma. I then created a functional prototype using Swift to show the practicality of the idea as well as the minor details of how our app would be designed!
 
-Concat was chosen by professors and students as one of the top 4 ideas in the Designathon competition!
+Concat was chosen by professors and students as one of the **top 4 ideas** in the Designathon competition!
 
+## Prototype
+
+![enter image description here](https://imgur.com/9YihMdp)
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMxMTE2MjgzXX0=
+eyJoaXN0b3J5IjpbLTE0ODkzNzg2MjEsNjMxMTE2MjgzXX0=
 -->
