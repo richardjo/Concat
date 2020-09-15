@@ -1,5 +1,7 @@
 ## Concat
 
+[enterlink description here](https://github.com/richardjo/Concat)
+
 **Concat** is a social media platform to meet new friend groups by matching students by interests and giving them tasks to do like playing online games together, drawing faces using condiments and more! The shared objective bonds students together and creates a lasting connection that other social media applications like Facebook Groups don't do.
 
 We designed Concat for the Northwestern Design-athon and it was chosen by professors and students as one of the **top 4 ideas** in the Design-athon competition!
@@ -26,5 +28,6 @@ Our team designed/wireframed the application using Figma. I then created a funct
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzI1MTIwMzgsNjMxMTE2MjgzXX0=
+eyJoaXN0b3J5IjpbNjkzNTY0MjYwLC0xODcyNTEyMDM4LDYzMT
+ExNjI4M119
 -->
